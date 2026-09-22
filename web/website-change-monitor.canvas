@@ -1,0 +1,330 @@
+{
+  "connections" : [
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-0000000000FA",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000C8",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000C9",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-0000000000FB",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000C9",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000CA",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-0000000000FC",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000CA",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000CB",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-0000000000FD",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000CA",
+        "portID" : "out1"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-0000000000CC",
+        "portID" : "in0"
+      }
+    }
+  ],
+  "nodes" : [
+    {
+      "id" : "00000000-0000-4000-8000-0000000000C8",
+      "kind" : "Start",
+      "payload" : {
+        "borderColorHex" : "34C759",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "34C759",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "none" : {
+
+          }
+        },
+        "subtitle" : "",
+        "systemImage" : "play.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000001",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        100,
+        240
+      ],
+      "size" : [
+        140,
+        64
+      ],
+      "title" : "Start",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-0000000000C9",
+      "kind" : "Process",
+      "payload" : {
+        "borderColorHex" : "0A84FF",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "0A84FF",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "process" : {
+            "_0" : {
+              "kind" : {
+                "web" : {
+                  "_0" : {
+                    "body" : "",
+                    "headers" : {
+
+                    },
+                    "method" : "GET",
+                    "url" : "https:\/\/example.com"
+                  }
+                }
+              },
+              "timeout" : 60
+            }
+          }
+        },
+        "subtitle" : "GET the page",
+        "systemImage" : "gearshape.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000002",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        340,
+        240
+      ],
+      "size" : [
+        170,
+        80
+      ],
+      "title" : "Fetch Page",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-0000000000CA",
+      "kind" : "Decision",
+      "payload" : {
+        "borderColorHex" : "FF9F0A",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "FF9F0A",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "decision" : {
+            "_0" : {
+              "defaultOutcome" : {
+                "followPort" : {
+                  "_0" : "out1"
+                }
+              },
+              "match" : "any",
+              "rules" : [
+                {
+                  "field" : {
+                    "stdout" : {
+
+                    }
+                  },
+                  "id" : "7DE7C031-F764-4A7E-9B8C-B1D80683FDDA",
+                  "op" : "contains",
+                  "outcome" : {
+                    "followPort" : {
+                      "_0" : "out0"
+                    }
+                  },
+                  "value" : "Example Domain"
+                }
+              ]
+            }
+          }
+        },
+        "subtitle" : "Body contains marker",
+        "systemImage" : "arrow.triangle.branch",
+        "templateId" : "00000000-0000-0000-0000-000000000003",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.3333333333333333,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.6666666666666666,
+          "id" : "out1",
+          "name" : "out1",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        600,
+        240
+      ],
+      "size" : [
+        170,
+        90
+      ],
+      "title" : "Still There?",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-0000000000CB",
+      "kind" : "Output",
+      "payload" : {
+        "borderColorHex" : "BF5AF2",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "BF5AF2",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "output" : {
+            "_0" : {
+              "fileNameStem" : "page-unchanged",
+              "reportType" : "text"
+            }
+          }
+        },
+        "subtitle" : "Marker present",
+        "systemImage" : "tray.and.arrow.down.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        }
+      ],
+      "position" : [
+        880,
+        150
+      ],
+      "size" : [
+        150,
+        72
+      ],
+      "title" : "Unchanged",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-0000000000CC",
+      "kind" : "Output",
+      "payload" : {
+        "borderColorHex" : "BF5AF2",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "BF5AF2",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "output" : {
+            "_0" : {
+              "fileNameStem" : "page-changed",
+              "reportType" : "text"
+            }
+          }
+        },
+        "subtitle" : "Marker missing",
+        "systemImage" : "tray.and.arrow.down.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        }
+      ],
+      "position" : [
+        880,
+        340
+      ],
+      "size" : [
+        150,
+        72
+      ],
+      "title" : "Changed",
+      "zIndex" : 0
+    }
+  ],
+  "schemaVersion" : 1
+}

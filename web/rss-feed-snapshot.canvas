@@ -1,0 +1,181 @@
+{
+  "connections" : [
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-0000000001C2",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000190",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000191",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-0000000001C3",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000191",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000192",
+        "portID" : "in0"
+      }
+    }
+  ],
+  "nodes" : [
+    {
+      "id" : "00000000-0000-4000-8000-000000000190",
+      "kind" : "Start",
+      "payload" : {
+        "borderColorHex" : "34C759",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "34C759",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "none" : {
+
+          }
+        },
+        "subtitle" : "",
+        "systemImage" : "play.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000001",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        120,
+        220
+      ],
+      "size" : [
+        140,
+        64
+      ],
+      "title" : "Start",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-000000000191",
+      "kind" : "Process",
+      "payload" : {
+        "borderColorHex" : "0A84FF",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "0A84FF",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "process" : {
+            "_0" : {
+              "kind" : {
+                "web" : {
+                  "_0" : {
+                    "body" : "",
+                    "headers" : {
+
+                    },
+                    "method" : "GET",
+                    "url" : "https:\/\/developer.apple.com\/news\/rss\/news.rss"
+                  }
+                }
+              },
+              "timeout" : 60
+            }
+          }
+        },
+        "subtitle" : "GET the feed",
+        "systemImage" : "gearshape.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000002",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        380,
+        220
+      ],
+      "size" : [
+        170,
+        80
+      ],
+      "title" : "Fetch Feed",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-000000000192",
+      "kind" : "Output",
+      "payload" : {
+        "borderColorHex" : "BF5AF2",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "BF5AF2",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "output" : {
+            "_0" : {
+              "fileNameStem" : "rss-feed",
+              "reportType" : "text"
+            }
+          }
+        },
+        "subtitle" : "Raw XML report",
+        "systemImage" : "tray.and.arrow.down.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        }
+      ],
+      "position" : [
+        660,
+        220
+      ],
+      "size" : [
+        150,
+        72
+      ],
+      "title" : "Save Feed",
+      "zIndex" : 0
+    }
+  ],
+  "schemaVersion" : 1
+}
