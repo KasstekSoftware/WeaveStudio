@@ -1,0 +1,139 @@
+{
+  "entries" : [
+    {
+      "author" : "Kasstek Software",
+      "category" : "web",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0001-4A00-8000-A11CE0000001",
+      "name" : "Website Health Check",
+      "path" : "web\/website-health-check.canvas",
+      "requiresScheduling" : true,
+      "summary" : "Fetch a site and branch on HTTP 200 to report up or down.",
+      "tags" : [
+        "http",
+        "uptime",
+        "monitor"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "web",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0002-4A00-8000-A11CE0000002",
+      "name" : "Website Change Monitor",
+      "path" : "web\/website-change-monitor.canvas",
+      "requiresScheduling" : true,
+      "summary" : "Fetch a page and flag whether an expected marker is still present.",
+      "tags" : [
+        "http",
+        "monitor",
+        "diff"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "web",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0003-4A00-8000-A11CE0000003",
+      "name" : "Broken Link Check",
+      "path" : "web\/broken-link-check.canvas",
+      "requiresScheduling" : false,
+      "summary" : "Request a URL and report whether it responds OK or is broken.",
+      "tags" : [
+        "http",
+        "links"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "web",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0004-4A00-8000-A11CE0000004",
+      "name" : "RSS Feed Snapshot",
+      "path" : "web\/rss-feed-snapshot.canvas",
+      "requiresScheduling" : false,
+      "summary" : "Download an RSS\/Atom feed and save the raw XML as a report.",
+      "tags" : [
+        "rss",
+        "download"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "api",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0005-4A00-8000-A11CE0000005",
+      "name" : "JSON API to Report",
+      "path" : "api\/json-api-to-report.canvas",
+      "requiresScheduling" : false,
+      "summary" : "Call a JSON API, branch on a field, and save success or error.",
+      "tags" : [
+        "api",
+        "json",
+        "decision"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "api",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0006-4A00-8000-A11CE0000006",
+      "name" : "API Latency Watch",
+      "path" : "api\/api-latency-watch.canvas",
+      "requiresScheduling" : true,
+      "summary" : "Time an API call and report when it is slower than a threshold.",
+      "tags" : [
+        "api",
+        "latency",
+        "monitor"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "api",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0007-4A00-8000-A11CE0000007",
+      "name" : "JSON Webhook Poster",
+      "path" : "api\/json-webhook-poster.canvas",
+      "requiresScheduling" : false,
+      "summary" : "POST a JSON payload to a webhook and report sent or failed.",
+      "tags" : [
+        "api",
+        "post",
+        "webhook"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "api",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0008-4A00-8000-A11CE0000008",
+      "name" : "Public IP Snapshot",
+      "path" : "api\/public-ip-snapshot.canvas",
+      "requiresScheduling" : true,
+      "summary" : "Fetch your public IP as JSON and save it — schedule it to spot changes.",
+      "tags" : [
+        "api",
+        "network"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    }
+  ],
+  "formatVersion" : 1,
+  "generatedDate" : "2026-09-22T12:00:00Z"
+}
