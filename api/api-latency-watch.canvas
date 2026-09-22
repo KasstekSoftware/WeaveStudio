@@ -1,0 +1,330 @@
+{
+  "connections" : [
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-00000000028A",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000258",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000259",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-00000000028B",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000259",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000025A",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-00000000028C",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000025A",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000025B",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-00000000028D",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000025A",
+        "portID" : "out1"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000025C",
+        "portID" : "in0"
+      }
+    }
+  ],
+  "nodes" : [
+    {
+      "id" : "00000000-0000-4000-8000-000000000258",
+      "kind" : "Start",
+      "payload" : {
+        "borderColorHex" : "34C759",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "34C759",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "none" : {
+
+          }
+        },
+        "subtitle" : "",
+        "systemImage" : "play.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000001",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        100,
+        240
+      ],
+      "size" : [
+        140,
+        64
+      ],
+      "title" : "Start",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-000000000259",
+      "kind" : "Process",
+      "payload" : {
+        "borderColorHex" : "0A84FF",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "0A84FF",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "process" : {
+            "_0" : {
+              "kind" : {
+                "web" : {
+                  "_0" : {
+                    "body" : "",
+                    "headers" : {
+
+                    },
+                    "method" : "GET",
+                    "url" : "https:\/\/jsonplaceholder.typicode.com\/todos\/1"
+                  }
+                }
+              },
+              "timeout" : 60
+            }
+          }
+        },
+        "subtitle" : "GET the endpoint",
+        "systemImage" : "gearshape.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000002",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        340,
+        240
+      ],
+      "size" : [
+        170,
+        80
+      ],
+      "title" : "Call API",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-00000000025A",
+      "kind" : "Decision",
+      "payload" : {
+        "borderColorHex" : "FF9F0A",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "FF9F0A",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "decision" : {
+            "_0" : {
+              "defaultOutcome" : {
+                "followPort" : {
+                  "_0" : "out1"
+                }
+              },
+              "match" : "any",
+              "rules" : [
+                {
+                  "field" : {
+                    "duration" : {
+
+                    }
+                  },
+                  "id" : "C22A9630-F107-4A0E-805B-67AAEF56D3A0",
+                  "op" : "greaterThan",
+                  "outcome" : {
+                    "followPort" : {
+                      "_0" : "out0"
+                    }
+                  },
+                  "value" : "1.0"
+                }
+              ]
+            }
+          }
+        },
+        "subtitle" : "Duration > 1s",
+        "systemImage" : "arrow.triangle.branch",
+        "templateId" : "00000000-0000-0000-0000-000000000003",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.3333333333333333,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.6666666666666666,
+          "id" : "out1",
+          "name" : "out1",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        600,
+        240
+      ],
+      "size" : [
+        170,
+        90
+      ],
+      "title" : "Too Slow?",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-00000000025B",
+      "kind" : "Output",
+      "payload" : {
+        "borderColorHex" : "BF5AF2",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "BF5AF2",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "output" : {
+            "_0" : {
+              "fileNameStem" : "api-slow",
+              "reportType" : "text"
+            }
+          }
+        },
+        "subtitle" : "Report slow call",
+        "systemImage" : "tray.and.arrow.down.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        }
+      ],
+      "position" : [
+        880,
+        150
+      ],
+      "size" : [
+        150,
+        72
+      ],
+      "title" : "Slow",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-00000000025C",
+      "kind" : "Output",
+      "payload" : {
+        "borderColorHex" : "BF5AF2",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "BF5AF2",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "output" : {
+            "_0" : {
+              "fileNameStem" : "api-ok",
+              "reportType" : "text"
+            }
+          }
+        },
+        "subtitle" : "Report fast call",
+        "systemImage" : "tray.and.arrow.down.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        }
+      ],
+      "position" : [
+        880,
+        340
+      ],
+      "size" : [
+        150,
+        72
+      ],
+      "title" : "OK",
+      "zIndex" : 0
+    }
+  ],
+  "schemaVersion" : 1
+}
