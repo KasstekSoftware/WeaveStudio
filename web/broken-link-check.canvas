@@ -1,0 +1,330 @@
+{
+  "connections" : [
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-00000000015E",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000012C",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000012D",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-00000000015F",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000012D",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000012E",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-000000000160",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000012E",
+        "portID" : "out0"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000012F",
+        "portID" : "in0"
+      }
+    },
+    {
+      "bidirectional" : false,
+      "id" : "00000000-0000-4000-8000-000000000161",
+      "source" : {
+        "nodeID" : "00000000-0000-4000-8000-00000000012E",
+        "portID" : "out1"
+      },
+      "target" : {
+        "nodeID" : "00000000-0000-4000-8000-000000000130",
+        "portID" : "in0"
+      }
+    }
+  ],
+  "nodes" : [
+    {
+      "id" : "00000000-0000-4000-8000-00000000012C",
+      "kind" : "Start",
+      "payload" : {
+        "borderColorHex" : "34C759",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "34C759",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "none" : {
+
+          }
+        },
+        "subtitle" : "",
+        "systemImage" : "play.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000001",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        100,
+        240
+      ],
+      "size" : [
+        140,
+        64
+      ],
+      "title" : "Start",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-00000000012D",
+      "kind" : "Process",
+      "payload" : {
+        "borderColorHex" : "0A84FF",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "0A84FF",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "process" : {
+            "_0" : {
+              "kind" : {
+                "web" : {
+                  "_0" : {
+                    "body" : "",
+                    "headers" : {
+
+                    },
+                    "method" : "GET",
+                    "url" : "https:\/\/www.apple.com\/library\/test\/success.html"
+                  }
+                }
+              },
+              "timeout" : 60
+            }
+          }
+        },
+        "subtitle" : "GET the link",
+        "systemImage" : "gearshape.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000002",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        340,
+        240
+      ],
+      "size" : [
+        170,
+        80
+      ],
+      "title" : "Request URL",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-00000000012E",
+      "kind" : "Decision",
+      "payload" : {
+        "borderColorHex" : "FF9F0A",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "FF9F0A",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "decision" : {
+            "_0" : {
+              "defaultOutcome" : {
+                "followPort" : {
+                  "_0" : "out1"
+                }
+              },
+              "match" : "any",
+              "rules" : [
+                {
+                  "field" : {
+                    "exitCode" : {
+
+                    }
+                  },
+                  "id" : "6DA64CF0-86CE-474C-ADA3-1E8CC7F974DC",
+                  "op" : "equals",
+                  "outcome" : {
+                    "followPort" : {
+                      "_0" : "out0"
+                    }
+                  },
+                  "value" : "200"
+                }
+              ]
+            }
+          }
+        },
+        "subtitle" : "200 = ok",
+        "systemImage" : "arrow.triangle.branch",
+        "templateId" : "00000000-0000-0000-0000-000000000003",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.3333333333333333,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.6666666666666666,
+          "id" : "out1",
+          "name" : "out1",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        600,
+        240
+      ],
+      "size" : [
+        170,
+        90
+      ],
+      "title" : "Responds OK?",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-00000000012F",
+      "kind" : "Output",
+      "payload" : {
+        "borderColorHex" : "BF5AF2",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "BF5AF2",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "output" : {
+            "_0" : {
+              "fileNameStem" : "link-ok",
+              "reportType" : "text"
+            }
+          }
+        },
+        "subtitle" : "Link works",
+        "systemImage" : "tray.and.arrow.down.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        }
+      ],
+      "position" : [
+        880,
+        150
+      ],
+      "size" : [
+        150,
+        72
+      ],
+      "title" : "OK",
+      "zIndex" : 0
+    },
+    {
+      "id" : "00000000-0000-4000-8000-000000000130",
+      "kind" : "Output",
+      "payload" : {
+        "borderColorHex" : "BF5AF2",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "BF5AF2",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "output" : {
+            "_0" : {
+              "fileNameStem" : "link-broken",
+              "reportType" : "text"
+            }
+          }
+        },
+        "subtitle" : "Link failed",
+        "systemImage" : "tray.and.arrow.down.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        }
+      ],
+      "position" : [
+        880,
+        340
+      ],
+      "size" : [
+        150,
+        72
+      ],
+      "title" : "Broken",
+      "zIndex" : 0
+    }
+  ],
+  "schemaVersion" : 1
+}
