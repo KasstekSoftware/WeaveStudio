@@ -1,0 +1,90 @@
+{
+  "entries" : [
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "Pretty-print JSON with sorted keys and 2-space indentation.",
+      "id" : "5C819700-0001-4A00-8000-5C819E000001",
+      "language" : "python",
+      "name" : "Reformat JSON",
+      "path" : "scripts\/python\/reformat-json.py",
+      "tags" : [
+        "json",
+        "format"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "Convert CSV text into a JSON array of objects.",
+      "id" : "5C819700-0002-4A00-8000-5C819E000002",
+      "language" : "python",
+      "name" : "CSV to JSON",
+      "path" : "scripts\/python\/csv-to-json.py",
+      "tags" : [
+        "csv",
+        "json"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "Convert a JSON array of objects into CSV rows.",
+      "id" : "5C819700-0003-4A00-8000-5C819E000003",
+      "language" : "python",
+      "name" : "JSON to CSV",
+      "path" : "scripts\/python\/json-to-csv.py",
+      "tags" : [
+        "json",
+        "csv"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "Pull a dotted-path value out of a JSON object.",
+      "id" : "5C819700-0004-4A00-8000-5C819E000004",
+      "language" : "python",
+      "name" : "Extract JSON Field",
+      "path" : "scripts\/python\/extract-json-field.py",
+      "tags" : [
+        "json",
+        "extract"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "Report the line, word, and character counts of the input.",
+      "id" : "5C819700-0005-4A00-8000-5C819E000005",
+      "language" : "bash",
+      "name" : "Count Lines",
+      "path" : "scripts\/bash\/line-count.sh",
+      "tags" : [
+        "text",
+        "count"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "Convert the input text to uppercase.",
+      "id" : "5C819700-0006-4A00-8000-5C819E000006",
+      "language" : "bash",
+      "name" : "To Uppercase",
+      "path" : "scripts\/bash\/to-uppercase.sh",
+      "tags" : [
+        "text",
+        "transform"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    }
+  ],
+  "formatVersion" : 1,
+  "generatedDate" : "2026-09-22T12:00:00Z"
+}
