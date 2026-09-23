@@ -2,32 +2,32 @@
   "connections" : [
     {
       "bidirectional" : false,
-      "id" : "00000000-0000-4000-8000-00000000041A",
+      "id" : "00000000-0000-4000-8000-00000000047E",
       "source" : {
-        "nodeID" : "00000000-0000-4000-8000-0000000003E8",
+        "nodeID" : "00000000-0000-4000-8000-00000000044C",
         "portID" : "out0"
       },
       "target" : {
-        "nodeID" : "00000000-0000-4000-8000-0000000003E9",
+        "nodeID" : "00000000-0000-4000-8000-00000000044D",
         "portID" : "in0"
       }
     },
     {
       "bidirectional" : false,
-      "id" : "00000000-0000-4000-8000-00000000041B",
+      "id" : "00000000-0000-4000-8000-00000000047F",
       "source" : {
-        "nodeID" : "00000000-0000-4000-8000-0000000003E9",
+        "nodeID" : "00000000-0000-4000-8000-00000000044D",
         "portID" : "out0"
       },
       "target" : {
-        "nodeID" : "00000000-0000-4000-8000-0000000003EA",
+        "nodeID" : "00000000-0000-4000-8000-00000000044E",
         "portID" : "in0"
       }
     }
   ],
   "nodes" : [
     {
-      "id" : "00000000-0000-4000-8000-0000000003E8",
+      "id" : "00000000-0000-4000-8000-00000000044C",
       "kind" : "Start",
       "payload" : {
         "borderColorHex" : "34C759",
@@ -69,7 +69,7 @@
       "zIndex" : 0
     },
     {
-      "id" : "00000000-0000-4000-8000-0000000003E9",
+      "id" : "00000000-0000-4000-8000-00000000044D",
       "kind" : "Process",
       "payload" : {
         "borderColorHex" : "0A84FF",
@@ -86,19 +86,20 @@
               "kind" : {
                 "script" : {
                   "arguments" : [
-                    "name,qty\napples,3\nbread,1"
+                    "user.name",
+                    "{\"user\":{\"name\":\"Ada\",\"id\":1}}"
                   ],
                   "environment" : {
 
                   },
-                  "scriptId" : "5C819700-0002-4A00-8000-5C819E000002"
+                  "scriptId" : "5C819700-0004-4A00-8000-5C819E000004"
                 }
               },
               "timeout" : 60
             }
           }
         },
-        "subtitle" : "csv-to-json.py",
+        "subtitle" : "extract-json-field.py",
         "systemImage" : "gearshape.fill",
         "templateId" : "00000000-0000-0000-0000-000000000002",
         "textColorHex" : "000000"
@@ -127,11 +128,11 @@
         170,
         80
       ],
-      "title" : "Convert CSV",
+      "title" : "Extract Field",
       "zIndex" : 0
     },
     {
-      "id" : "00000000-0000-4000-8000-0000000003EA",
+      "id" : "00000000-0000-4000-8000-00000000044E",
       "kind" : "Output",
       "payload" : {
         "borderColorHex" : "BF5AF2",
@@ -145,12 +146,12 @@
         "runConfig" : {
           "output" : {
             "_0" : {
-              "fileNameStem" : "csv-as-json",
+              "fileNameStem" : "json-field",
               "reportType" : "text"
             }
           }
         },
-        "subtitle" : "JSON report",
+        "subtitle" : "Field report",
         "systemImage" : "tray.and.arrow.down.fill",
         "templateId" : "00000000-0000-0000-0000-000000000004",
         "textColorHex" : "000000"
