@@ -8,6 +8,9 @@
       "name" : "Website Health Check",
       "path" : "web\/website-health-check.canvas",
       "requiresScheduling" : true,
+      "scriptIds" : [
+
+      ],
       "summary" : "Fetch a site and branch on HTTP 200 to report up or down.",
       "tags" : [
         "http",
@@ -25,6 +28,9 @@
       "name" : "Website Change Monitor",
       "path" : "web\/website-change-monitor.canvas",
       "requiresScheduling" : true,
+      "scriptIds" : [
+
+      ],
       "summary" : "Fetch a page and flag whether an expected marker is still present.",
       "tags" : [
         "http",
@@ -42,6 +48,9 @@
       "name" : "Broken Link Check",
       "path" : "web\/broken-link-check.canvas",
       "requiresScheduling" : false,
+      "scriptIds" : [
+
+      ],
       "summary" : "Request a URL and report whether it responds OK or is broken.",
       "tags" : [
         "http",
@@ -58,6 +67,9 @@
       "name" : "RSS Feed Snapshot",
       "path" : "web\/rss-feed-snapshot.canvas",
       "requiresScheduling" : false,
+      "scriptIds" : [
+
+      ],
       "summary" : "Download an RSS\/Atom feed and save the raw XML as a report.",
       "tags" : [
         "rss",
@@ -74,6 +86,9 @@
       "name" : "JSON API to Report",
       "path" : "api\/json-api-to-report.canvas",
       "requiresScheduling" : false,
+      "scriptIds" : [
+
+      ],
       "summary" : "Call a JSON API, branch on a field, and save success or error.",
       "tags" : [
         "api",
@@ -91,6 +106,9 @@
       "name" : "API Latency Watch",
       "path" : "api\/api-latency-watch.canvas",
       "requiresScheduling" : true,
+      "scriptIds" : [
+
+      ],
       "summary" : "Time an API call and report when it is slower than a threshold.",
       "tags" : [
         "api",
@@ -108,6 +126,9 @@
       "name" : "JSON Webhook Poster",
       "path" : "api\/json-webhook-poster.canvas",
       "requiresScheduling" : false,
+      "scriptIds" : [
+
+      ],
       "summary" : "POST a JSON payload to a webhook and report sent or failed.",
       "tags" : [
         "api",
@@ -125,6 +146,9 @@
       "name" : "Public IP Snapshot",
       "path" : "api\/public-ip-snapshot.canvas",
       "requiresScheduling" : true,
+      "scriptIds" : [
+
+      ],
       "summary" : "Fetch your public IP as JSON and save it — schedule it to spot changes.",
       "tags" : [
         "api",
@@ -134,18 +158,64 @@
       "version" : 1
     },
     {
-      "author" : "Pete Puma",
-      "category" : "web",
-      "createdDate" : "2026-09-23T14:00:19Z",
-      "id" : "572B9E42-7660-47A6-977E-4661A178EFB7",
-      "name" : "Call a JSON API - updated",
-      "path" : "web\/call-a-json-api---updated.canvas",
+      "author" : "Kasstek Software",
+      "category" : "files",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-0009-4A00-8000-A11CE0000009",
+      "name" : "Pretty-Print JSON",
+      "path" : "files\/pretty-print-json.canvas",
       "requiresScheduling" : false,
-      "summary" : "",
-      "tags" : [
-
+      "scriptIds" : [
+        "5C819700-0001-4A00-8000-5C819E000001"
       ],
-      "updatedDate" : "2026-09-23T14:00:19Z",
+      "summary" : "Reformat a JSON blob with sorted keys and 2-space indentation.",
+      "tags" : [
+        "json",
+        "format",
+        "script"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "files",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-000A-4A00-8000-A11CE000000A",
+      "name" : "CSV to JSON",
+      "path" : "files\/csv-to-json.canvas",
+      "requiresScheduling" : false,
+      "scriptIds" : [
+        "5C819700-0002-4A00-8000-5C819E000002"
+      ],
+      "summary" : "Convert CSV rows into a JSON array of objects.",
+      "tags" : [
+        "csv",
+        "json",
+        "convert",
+        "script"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "files",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-000B-4A00-8000-A11CE000000B",
+      "name" : "Extract JSON Field",
+      "path" : "files\/extract-json-field.canvas",
+      "requiresScheduling" : false,
+      "scriptIds" : [
+        "5C819700-0004-4A00-8000-5C819E000004"
+      ],
+      "summary" : "Pull a dotted-path value out of a JSON object.",
+      "tags" : [
+        "json",
+        "extract",
+        "script"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
       "version" : 1
     }
   ],
