@@ -132,6 +132,21 @@
       ],
       "updatedDate" : "2026-09-22T12:00:00Z",
       "version" : 1
+    },
+    {
+      "author" : "Pete Puma",
+      "category" : "web",
+      "createdDate" : "2026-09-23T12:22:34Z",
+      "id" : "98E95A74-28E7-4605-956E-CF90999B8EE1",
+      "name" : "Call a JSON API - 23",
+      "path" : "web\/call-a-json-api---23.canvas",
+      "requiresScheduling" : false,
+      "summary" : "First sample post",
+      "tags" : [
+
+      ],
+      "updatedDate" : "2026-09-23T12:22:34Z",
+      "version" : 1
     }
   ],
   "formatVersion" : 1,
