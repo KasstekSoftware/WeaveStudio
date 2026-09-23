@@ -21,6 +21,7 @@ WeaveStudio **Pro Scheduler** upgrade.
 - **Website Change Monitor** ⏰ — Fetch a page and flag whether an expected marker is still present.
 - **Broken Link Check** — Request a URL and report whether it responds OK or is broken.
 - **RSS Feed Snapshot** — Download an RSS/Atom feed and save the raw XML as a report.
+- **Call a JSON API - updated** —  (by Pete Puma)
 
 ## Api
 
