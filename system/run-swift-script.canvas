@@ -2,32 +2,32 @@
   "connections" : [
     {
       "bidirectional" : false,
-      "id" : "00000000-0000-4000-8000-00000000047E",
+      "id" : "00000000-0000-4000-8000-0000000004E2",
       "source" : {
-        "nodeID" : "00000000-0000-4000-8000-00000000044C",
+        "nodeID" : "00000000-0000-4000-8000-0000000004B0",
         "portID" : "out0"
       },
       "target" : {
-        "nodeID" : "00000000-0000-4000-8000-00000000044D",
+        "nodeID" : "00000000-0000-4000-8000-0000000004B1",
         "portID" : "in0"
       }
     },
     {
       "bidirectional" : false,
-      "id" : "00000000-0000-4000-8000-00000000047F",
+      "id" : "00000000-0000-4000-8000-0000000004E3",
       "source" : {
-        "nodeID" : "00000000-0000-4000-8000-00000000044D",
+        "nodeID" : "00000000-0000-4000-8000-0000000004B1",
         "portID" : "out0"
       },
       "target" : {
-        "nodeID" : "00000000-0000-4000-8000-00000000044E",
+        "nodeID" : "00000000-0000-4000-8000-0000000004B2",
         "portID" : "in0"
       }
     }
   ],
   "nodes" : [
     {
-      "id" : "00000000-0000-4000-8000-00000000044C",
+      "id" : "00000000-0000-4000-8000-0000000004B0",
       "kind" : "Start",
       "payload" : {
         "borderColorHex" : "34C759",
@@ -69,7 +69,7 @@
       "zIndex" : 0
     },
     {
-      "id" : "00000000-0000-4000-8000-00000000044D",
+      "id" : "00000000-0000-4000-8000-0000000004B1",
       "kind" : "Process",
       "payload" : {
         "borderColorHex" : "0A84FF",
@@ -86,20 +86,19 @@
               "kind" : {
                 "script" : {
                   "arguments" : [
-                    "user.name",
-                    "{\"user\":{\"name\":\"Ada\",\"id\":1}}"
+                    "Weave"
                   ],
                   "environment" : {
 
                   },
-                  "scriptId" : "5C819700-0004-4A00-8000-5C819E000004"
+                  "scriptId" : "5C819700-0007-4A00-8000-5C819E000007"
                 }
               },
               "timeout" : 60
             }
           }
         },
-        "subtitle" : "extract-json-field.py",
+        "subtitle" : "greet.swift",
         "systemImage" : "gearshape.fill",
         "templateId" : "00000000-0000-0000-0000-000000000002",
         "textColorHex" : "000000"
@@ -128,32 +127,42 @@
         170,
         80
       ],
-      "title" : "Extract Field",
+      "title" : "Greet (Swift)",
       "zIndex" : 0
     },
     {
-      "id" : "00000000-0000-4000-8000-00000000044E",
-      "kind" : "Output",
+      "id" : "00000000-0000-4000-8000-0000000004B2",
+      "kind" : "Process",
       "payload" : {
-        "borderColorHex" : "BF5AF2",
+        "borderColorHex" : "0A84FF",
         "fillColorHex" : "FFFFFF",
         "fontName" : "System",
         "fontSize" : 15,
-        "iconColorHex" : "BF5AF2",
+        "iconColorHex" : "0A84FF",
         "iconSize" : 22,
         "opacity" : 1,
         "pausesFlow" : false,
         "runConfig" : {
-          "output" : {
+          "process" : {
             "_0" : {
-              "fileNameStem" : "json-field",
-              "reportType" : "text"
+              "kind" : {
+                "script" : {
+                  "arguments" : [
+                    "Swift script finished ✓"
+                  ],
+                  "environment" : {
+
+                  },
+                  "scriptId" : "5C819700-0008-4A00-8000-5C819E000008"
+                }
+              },
+              "timeout" : 60
             }
           }
         },
-        "subtitle" : "Field report",
-        "systemImage" : "tray.and.arrow.down.fill",
-        "templateId" : "00000000-0000-0000-0000-000000000004",
+        "subtitle" : "print the message",
+        "systemImage" : "gearshape.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000002",
         "textColorHex" : "000000"
       },
       "ports" : [
@@ -163,6 +172,13 @@
           "id" : "in0",
           "name" : "in0",
           "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
         }
       ],
       "position" : [
@@ -170,15 +186,15 @@
         220
       ],
       "size" : [
-        150,
-        72
+        170,
+        80
       ],
-      "title" : "Save Output",
+      "title" : "Print",
       "zIndex" : 0
     }
   ],
   "schemaVersion" : 1,
   "viewportOffsetHeight" : 90,
-  "viewportOffsetWidth" : 85,
+  "viewportOffsetWidth" : 75,
   "viewportZoom" : 1
 }

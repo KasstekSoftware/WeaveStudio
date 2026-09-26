@@ -83,6 +83,34 @@
       ],
       "updatedDate" : "2026-09-22T12:00:00Z",
       "version" : 1
+    },
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "A tiny Swift script that prints a greeting for the name passed as an argument.",
+      "id" : "5C819700-0007-4A00-8000-5C819E000007",
+      "language" : "swift",
+      "name" : "Greet (Swift)",
+      "path" : "scripts\/swift\/greet.swift",
+      "tags" : [
+        "swift",
+        "sample"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "description" : "Print (echo) the message passed as the first argument — a simple final Print step.",
+      "id" : "5C819700-0008-4A00-8000-5C819E000008",
+      "language" : "bash",
+      "name" : "Print Line",
+      "path" : "scripts\/bash\/print-line.sh",
+      "tags" : [
+        "print",
+        "output"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
     }
   ],
   "formatVersion" : 1,

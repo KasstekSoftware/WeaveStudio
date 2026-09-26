@@ -217,6 +217,68 @@
       ],
       "updatedDate" : "2026-09-22T12:00:00Z",
       "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "system",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-000C-4A00-8000-A11CE000000C",
+      "name" : "Run a Swift Script",
+      "path" : "system\/run-swift-script.canvas",
+      "requiresScheduling" : false,
+      "scriptIds" : [
+        "5C819700-0007-4A00-8000-5C819E000007",
+        "5C819700-0008-4A00-8000-5C819E000008"
+      ],
+      "summary" : "Compile and run a tiny Swift script, then print the result.",
+      "tags" : [
+        "swift",
+        "script",
+        "print"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "system",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-000D-4A00-8000-A11CE000000D",
+      "name" : "Say a Message (macOS)",
+      "path" : "system\/say-a-message.canvas",
+      "requiresScheduling" : false,
+      "scriptIds" : [
+        "5C819700-0008-4A00-8000-5C819E000008"
+      ],
+      "summary" : "Run \/usr\/bin\/say with a parameter to speak text, then print a confirmation.",
+      "tags" : [
+        "automation",
+        "process",
+        "print"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "system",
+      "createdDate" : "2026-09-22T12:00:00Z",
+      "id" : "1D8C6A10-000E-4A00-8000-A11CE000000E",
+      "name" : "Launch TextEdit (macOS)",
+      "path" : "system\/launch-textedit.canvas",
+      "requiresScheduling" : false,
+      "scriptIds" : [
+        "5C819700-0008-4A00-8000-5C819E000008"
+      ],
+      "summary" : "Launch the TextEdit app, then print a confirmation. Re-pick the app if macOS asks.",
+      "tags" : [
+        "automation",
+        "process",
+        "gui",
+        "print"
+      ],
+      "updatedDate" : "2026-09-22T12:00:00Z",
+      "version" : 1
     }
   ],
   "formatVersion" : 1,

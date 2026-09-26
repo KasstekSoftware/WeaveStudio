@@ -183,7 +183,7 @@
 
                     }
                   },
-                  "id" : "CA1AE542-2FC5-4ACE-8F56-AC31EF49AC65",
+                  "id" : "7908A8ED-1328-4B67-87C4-F1900DAD0A62",
                   "op" : "equals",
                   "outcome" : {
                     "followPort" : {
@@ -326,5 +326,8 @@
       "zIndex" : 0
     }
   ],
-  "schemaVersion" : 1
+  "schemaVersion" : 1,
+  "viewportOffsetHeight" : 69,
+  "viewportOffsetWidth" : -15,
+  "viewportZoom" : 1
 }

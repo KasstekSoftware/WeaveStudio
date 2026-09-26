@@ -177,5 +177,8 @@
       "zIndex" : 0
     }
   ],
-  "schemaVersion" : 1
+  "schemaVersion" : 1,
+  "viewportOffsetHeight" : 90,
+  "viewportOffsetWidth" : 85,
+  "viewportZoom" : 1
 }

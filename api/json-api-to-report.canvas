@@ -183,7 +183,7 @@
                       "_0" : "userId"
                     }
                   },
-                  "id" : "45C14149-8EE0-4437-8B5E-89F3790D53DE",
+                  "id" : "AE01F30B-D233-4E07-9B8C-4F736C381F4A",
                   "op" : "equals",
                   "outcome" : {
                     "followPort" : {
@@ -326,5 +326,8 @@
       "zIndex" : 0
     }
   ],
-  "schemaVersion" : 1
+  "schemaVersion" : 1,
+  "viewportOffsetHeight" : 69,
+  "viewportOffsetWidth" : -15,
+  "viewportZoom" : 1
 }
