@@ -2,21 +2,21 @@
   "connections" : [
     {
       "bidirectional" : false,
-      "id" : "00000000-0000-4000-8000-000000000546",
+      "id" : "A3DBB1B8-DA1C-4857-9C25-A2D49E557A30",
       "source" : {
         "nodeID" : "00000000-0000-4000-8000-000000000514",
         "portID" : "out0"
       },
       "target" : {
-        "nodeID" : "00000000-0000-4000-8000-000000000515",
+        "nodeID" : "8D0B0C9D-30AD-4841-9AE0-1279C9F61114",
         "portID" : "in0"
       }
     },
     {
       "bidirectional" : false,
-      "id" : "00000000-0000-4000-8000-000000000547",
+      "id" : "ECEAE1B9-8DF4-4C65-964E-5343FBD3F49B",
       "source" : {
-        "nodeID" : "00000000-0000-4000-8000-000000000515",
+        "nodeID" : "8D0B0C9D-30AD-4841-9AE0-1279C9F61114",
         "portID" : "out0"
       },
       "target" : {
@@ -66,72 +66,6 @@
         64
       ],
       "title" : "Start",
-      "zIndex" : 0
-    },
-    {
-      "id" : "00000000-0000-4000-8000-000000000515",
-      "kind" : "Process",
-      "payload" : {
-        "borderColorHex" : "0A84FF",
-        "fillColorHex" : "FFFFFF",
-        "fontName" : "System",
-        "fontSize" : 15,
-        "iconColorHex" : "0A84FF",
-        "iconSize" : 22,
-        "opacity" : 1,
-        "pausesFlow" : false,
-        "runConfig" : {
-          "process" : {
-            "_0" : {
-              "kind" : {
-                "commandLineTool" : {
-                  "_0" : {
-                    "arguments" : [
-                      "Weave Studio automated this flow"
-                    ],
-                    "bookmark" : "",
-                    "displayName" : "say",
-                    "environment" : {
-
-                    },
-                    "path" : "\/usr\/bin\/say"
-                  }
-                }
-              },
-              "timeout" : 60
-            }
-          }
-        },
-        "subtitle" : "\/usr\/bin\/say",
-        "systemImage" : "gearshape.fill",
-        "templateId" : "00000000-0000-0000-0000-000000000002",
-        "textColorHex" : "000000"
-      },
-      "ports" : [
-        {
-          "direction" : "input",
-          "fraction" : 0.5,
-          "id" : "in0",
-          "name" : "in0",
-          "side" : "left"
-        },
-        {
-          "direction" : "output",
-          "fraction" : 0.5,
-          "id" : "out0",
-          "name" : "out0",
-          "side" : "right"
-        }
-      ],
-      "position" : [
-        380,
-        220
-      ],
-      "size" : [
-        170,
-        80
-      ],
-      "title" : "Say",
       "zIndex" : 0
     },
     {
@@ -194,6 +128,77 @@
         80
       ],
       "title" : "Print",
+      "zIndex" : 0
+    },
+    {
+      "id" : "8D0B0C9D-30AD-4841-9AE0-1279C9F61114",
+      "kind" : "Notify",
+      "payload" : {
+        "borderColorHex" : "FF2D55",
+        "fillColorHex" : "FFFFFF",
+        "fontName" : "System",
+        "fontSize" : 15,
+        "iconColorHex" : "FF2D55",
+        "iconSize" : 22,
+        "opacity" : 1,
+        "pausesFlow" : false,
+        "runConfig" : {
+          "notify" : {
+            "_0" : {
+              "always" : true,
+              "condition" : {
+                "field" : {
+                  "success" : {
+
+                  }
+                },
+                "id" : "FA3A8147-7FD9-437D-8E9C-4343B340068E",
+                "op" : "isTrue",
+                "outcome" : {
+                  "stop" : {
+
+                  }
+                },
+                "value" : ""
+              },
+              "flashMenuBar" : false,
+              "message" : "Flow is being processed",
+              "playSound" : false,
+              "showModal" : false,
+              "speakAloud" : true
+            }
+          }
+        },
+        "subtitle" : "alert on condition",
+        "systemImage" : "bell.fill",
+        "templateId" : "00000000-0000-0000-0000-000000000006",
+        "textColorHex" : "000000"
+      },
+      "ports" : [
+        {
+          "direction" : "input",
+          "fraction" : 0.5,
+          "id" : "in0",
+          "name" : "in0",
+          "side" : "left"
+        },
+        {
+          "direction" : "output",
+          "fraction" : 0.5,
+          "id" : "out0",
+          "name" : "out0",
+          "side" : "right"
+        }
+      ],
+      "position" : [
+        380,
+        220
+      ],
+      "size" : [
+        160,
+        76
+      ],
+      "title" : "Notify",
       "zIndex" : 0
     }
   ],
