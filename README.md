@@ -41,7 +41,7 @@ marked ⏰ are most useful when run **periodically**, which needs the WeaveStudi
 ## System
 
 - **Run a Swift Script** — Compile and run a tiny Swift script, then print the result.
-- **Say a Message (macOS)** — Run /usr/bin/say with a parameter to speak text, then print a confirmation.
+- **Say a Message (macOS)** — Send text to speak, then print a confirmation.
 - **Launch TextEdit (macOS)** — Launch the TextEdit app, then print a confirmation. Re-pick the app if macOS asks.
 
 ## Scripts
