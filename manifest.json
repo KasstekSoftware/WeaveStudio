@@ -244,13 +244,13 @@
       "category" : "system",
       "createdDate" : "2026-09-22T12:00:00Z",
       "id" : "1D8C6A10-000D-4A00-8000-A11CE000000D",
-      "name" : "Say a Message (macOS)",
-      "path" : "system\/say-a-message.canvas",
+      "name" : "Run a Command-Line Tool (macOS)",
+      "path" : "system\/run-command-line-tool.canvas",
       "requiresScheduling" : false,
       "scriptIds" : [
         "5C819700-0008-4A00-8000-5C819E000008"
       ],
-      "summary" : "Run \/usr\/bin\/say with a parameter to speak text, then print a confirmation.",
+      "summary" : "Run \/usr\/bin\/uname -a to print system info, then a final Print step.",
       "tags" : [
         "automation",
         "process",
@@ -279,8 +279,29 @@
       ],
       "updatedDate" : "2026-09-22T12:00:00Z",
       "version" : 1
+    },
+    {
+      "author" : "Kasstek Software",
+      "category" : "system",
+      "createdDate" : "2026-09-29T12:00:00Z",
+      "id" : "1D8C6A10-000F-4A00-8000-A11CE000000F",
+      "name" : "Say a Message (macOS)",
+      "path" : "system\/say-a-message.canvas",
+      "requiresScheduling" : false,
+      "scriptIds" : [
+        "5C819700-0008-4A00-8000-5C819E000008"
+      ],
+      "summary" : "Speak a message aloud using a Notify node's speak-aloud alert (sandbox-safe), then print a confirmation.",
+      "tags" : [
+        "automation",
+        "speech",
+        "notify",
+        "print"
+      ],
+      "updatedDate" : "2026-09-29T12:00:00Z",
+      "version" : 1
     }
   ],
   "formatVersion" : 1,
-  "generatedDate" : "2026-09-22T12:00:00Z"
+  "generatedDate" : "2026-09-29T12:00:00Z"
 }
